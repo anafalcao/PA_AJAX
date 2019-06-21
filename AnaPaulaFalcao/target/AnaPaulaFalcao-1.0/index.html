@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Trabalho 2 Leão</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="js/ajaxComBibliotecaJSON.js"></script>
+        <link rel="stylesheet" type ="text/css" media="all" href="CSS/newcss.css">
+        <script src="js/jquery.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <center>
+         <div class="header">    
+  <h1 style = "font-family: 'Allerta Stencil', Verdana; color: whitesmoke; text-shadow: 4px 4px 4px #000 ">Home Automation</h1> 
+</div>
+      
+        <br>
+        <form>
+            <table style="width:65%">
+                  <tr>
+                    <th>Medidores</th>
+                    <th>Período</th>
+                    <th>Data Final</th>
+                    <th>Tabela/Gráfico </th>
+                  </tr>
+                  <tr>
+                    <td><select id="medidor" name="medidor">
+                            <option value="medidor001" selected>Medidor 01</option> 
+                    </select></td>
+                    <td><select id="periodo">
+                      <option value="dia" selected>Dia</option>
+                      <option value="semana">Semana</option>
+                      <option value="mes">Mês</option>
+                      <option value="ano">Ano</option>
+                    </select></td>
+                    <td><input type="date" id="data" value="2019-05-13"></td>
+                    <td><label class="switch">
+                            <input type="checkbox" id="graficotabela"> 
+                        <!-- se check, grafico, se não, tabela. -->
+                        <span class="slider"></span>
+                        </label> </td>
+
+
+                    
+                  </tr>
+          
+            </table>
+            <br>
+            <input type="button" class="button"
+                               value="BUSCAR" 
+                               onclick="getDadosMedidores();"/>
+            </form>
+       
+            <table border="1px" style="width:65%">
+                <thead>
+                        <tr>
+                            <th>Data - Hora</th>
+                            <th>Umidade</th>
+                            <th>Temperatura</th>
+                        </tr>
+                </thead>
+                <tbody id="content">
+
+                </tbody>
+            </table> 
+                <br>
+                <br>
+                <br>
+        <button id="myButton" class="button">EDITAR MEDIDORES</button>
+
+                    <script type="text/javascript">
+                        document.getElementById("myButton").onclick = function () {
+                            location.href = "editarMedidores.jsp";
+                        };
+                        
+                   
+                    </script> 
+        
+    </center>
+</html>

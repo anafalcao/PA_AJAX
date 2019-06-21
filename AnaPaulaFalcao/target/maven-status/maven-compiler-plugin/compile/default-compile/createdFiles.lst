@@ -1,0 +1,6 @@
+mvc\modelo\MedidorRepository.class
+eel418\ajaxcombibliotecajson\Controller.class
+eel418\ajaxcombibliotecajson\MedidorController.class
+dto\Parametros.class
+mvc\modelo\MedidorPOJO.class
+mvc\modelo\AcessoBD.class
